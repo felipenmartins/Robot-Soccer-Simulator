@@ -28,6 +28,11 @@ void draw(){
 	translate(100, 0);
 	controller.draw(this, SCALE);
 	translate(-100, 0);
+	
+	// To restart controller and avoid robots to "freeze" every now and then:
+	 if (controller.isRunning()){
+   		controller.resumeGame();
+ 	}
 }
 
 /*
